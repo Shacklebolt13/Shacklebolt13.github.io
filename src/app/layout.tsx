@@ -2,6 +2,7 @@ import "./globals.css";
 import { HeroUiProvider } from "./providers";
 import StaticNavbar from "@/components/staticNavbar";
 import getContact from "@/services/dataService";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -17,6 +18,20 @@ export default function RootLayout({
         <meta name="google-site-verification" content="zqNePkuhgspfDUzSloh8ygRu9VvPXvqc7WWNM4OvzNE" />
       </head>
       <body className="overflow-x-hidden">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-G55ZZK2MY8"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-G55ZZK2MY8');
+          `}
+        </Script>
+
         <HeroUiProvider>
           <div className="min-h-screen flex flex-col">
             <StaticNavbar contactDetail={contactDetail} />
