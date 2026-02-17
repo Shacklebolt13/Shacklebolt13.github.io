@@ -14,6 +14,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="google-site-verification" content="zqNePkuhgspfDUzSloh8ygRu9VvPXvqc7WWNM4OvzNE" />
       </head>
       <body className="overflow-x-hidden">
         <HeroUiProvider>
